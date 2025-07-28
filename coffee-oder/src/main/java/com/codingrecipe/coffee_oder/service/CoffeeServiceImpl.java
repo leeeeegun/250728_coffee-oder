@@ -1,5 +1,9 @@
 package com.codingrecipe.coffee_oder.service;
 
+import com.codingrecipe.coffee_oder.entity.Coffee;
+import com.codingrecipe.coffee_oder.repository.CoffeeRepository;
+import com.codingrecipe.coffee_oder.service.request.RegisterCoffeeRequest;
+import com.codingrecipe.coffee_oder.service.response.RegisterCoffeeResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

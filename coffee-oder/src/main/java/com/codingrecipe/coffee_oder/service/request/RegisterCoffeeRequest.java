@@ -1,5 +1,6 @@
 package com.codingrecipe.coffee_oder.service.request;
 
+import com.codingrecipe.coffee_oder.entity.Coffee;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
