@@ -1,4 +1,4 @@
-package com.codingrecipe.coffeeoder.service;
+package com.codingrecipe.coffee_oder.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

@@ -1,4 +1,4 @@
-package com.codingrecipe.coffeeoder;
+package com.codingrecipe.coffee_oder;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

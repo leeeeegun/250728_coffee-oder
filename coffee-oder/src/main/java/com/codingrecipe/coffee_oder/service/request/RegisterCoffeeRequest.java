@@ -1,4 +1,4 @@
-package com.codingrecipe.coffeeoder.service.request;
+package com.codingrecipe.coffee_oder.service.request;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

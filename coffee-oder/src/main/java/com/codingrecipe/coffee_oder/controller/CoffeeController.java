@@ -1,9 +1,10 @@
-package com.codingrecipe.coffeeoder.controller;
+package com.codingrecipe.coffee_oder.controller;
 
 
-import com.codingrecipe.coffeeoder.service.CoffeeService;
-import com.codingrecipe.coffeeoder.service.request.RegisterCoffeeRequest;
-import com.codingrecipe.coffeeoder.service.response.RegisterCoffeeResponse;
+import com.codingrecipe.coffee_oder.controller.response_form.RegisterCoffeeResponseForm;
+import com.codingrecipe.coffee_oder.service.CoffeeService;
+import com.codingrecipe.coffee_oder.service.request.RegisterCoffeeRequest;
+import com.codingrecipe.coffee_oder.service.response.RegisterCoffeeResponse;
 import jakarta.servlet.ServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

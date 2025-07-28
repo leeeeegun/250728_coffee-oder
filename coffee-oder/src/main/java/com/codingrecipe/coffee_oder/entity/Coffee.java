@@ -1,4 +1,4 @@
-package com.codingrecipe.coffeeoder.entity;
+package com.codingrecipe.coffee_oder.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
