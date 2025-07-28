@@ -1,5 +1,6 @@
 package com.codingrecipe.account.controller.response_form;
 
+import com.codingrecipe.account.controller.request_form.RegisterAccountRequestForm;
 import com.codingrecipe.coffee_oder.controller.request_form.RegisterCoffeeRequestForm;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
