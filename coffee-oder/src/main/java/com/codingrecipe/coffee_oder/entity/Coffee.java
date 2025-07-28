@@ -1,5 +1,6 @@
 package com.codingrecipe.coffee_oder.entity;
 
+import com.codingrecipe.account.entity.Account;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,16 +19,23 @@ public class Coffee {
     private long id;
 
     private String coffeeName;
-    private String coffeePrice;
+    private Long coffeePrice;
     private String coffeeData;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "account_id", nullable = false)
     private Account account;
 
-    public Coffee(String coffeeName, String coffeePrice, String coffeeData) {
+    public Coffee(String coffeeName, Long coffeePrice, String coffeeData) {
         this.coffeeName = coffeeName;
         this.coffeePrice = coffeePrice;
         this.coffeeData = coffeeData;
+    }
+
+    public Coffee(String coffeeName, Long coffeePrice, String coffeeData, Account account) {
+        this.coffeeName = coffeeName;
+        this.coffeePrice = coffeePrice;
+        this.coffeeData = coffeeData;
+        this.account = account;
     }
 }

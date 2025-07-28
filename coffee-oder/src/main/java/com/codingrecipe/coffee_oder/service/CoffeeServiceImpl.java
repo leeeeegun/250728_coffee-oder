@@ -1,5 +1,7 @@
 package com.codingrecipe.coffee_oder.service;
 
+import com.codingrecipe.account.entity.Account;
+import com.codingrecipe.account.repository.AccountRepository;
 import com.codingrecipe.coffee_oder.entity.Coffee;
 import com.codingrecipe.coffee_oder.repository.CoffeeRepository;
 import com.codingrecipe.coffee_oder.service.request.RegisterCoffeeRequest;

@@ -10,11 +10,11 @@ public class RegisterCoffeeResponseForm {
 
     private final Long coffeeId;
     private final String coffeeName;
-    private final String coffeePrice;
+    private final Long coffeePrice;
     private final String coffeeData;
     private final String registerAccountNickname;
 
-    public RegisterCoffeeResponseForm form(RegisterCoffeeResponseForm response) {
+    public static RegisterCoffeeResponseForm from(RegisterCoffeeResponse response) {
         return new RegisterCoffeeResponseForm(
                 response.getCoffeeId(),
                 response.getCoffeeName(),

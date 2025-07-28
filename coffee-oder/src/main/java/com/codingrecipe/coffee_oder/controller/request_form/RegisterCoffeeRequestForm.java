@@ -11,7 +11,7 @@ import lombok.ToString;
 public class RegisterCoffeeRequestForm {
 
     final private String coffeeName;
-    final private String coffeePrice;
+    final private Long coffeePrice;
     final private String coffeeData;
 
     // RequestForm을 Request로 변환

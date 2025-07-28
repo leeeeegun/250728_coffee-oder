@@ -1,6 +1,7 @@
 package com.codingrecipe.account.controller.response_form;
 
 import com.codingrecipe.account.controller.request_form.RegisterAccountRequestForm;
+import com.codingrecipe.account.service.response.RegisterAccountResponse;
 import com.codingrecipe.coffee_oder.controller.request_form.RegisterCoffeeRequestForm;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -12,7 +13,7 @@ public class RegisterAccountResponseForm {
     final private String email;
     final private String nickname;
 
-    public static RegisterAccountRequestForm from(
+    public static RegisterAccountResponseForm from(
             final RegisterAccountResponse response,
             final String userToken) {
 

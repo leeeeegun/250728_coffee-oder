@@ -1,6 +1,7 @@
 package com.codingrecipe.account.repository;
 
+import com.codingrecipe.account.entity.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public class AccountRepository extends JpaRepository<Account, Long> {
+public interface AccountRepository extends JpaRepository<Account, Long> {
 }

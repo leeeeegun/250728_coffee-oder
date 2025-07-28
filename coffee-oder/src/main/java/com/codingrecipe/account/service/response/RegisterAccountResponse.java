@@ -1,16 +1,17 @@
 package com.codingrecipe.account.service.response;
 
+import com.codingrecipe.account.entity.Account;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 @Getter
 @RequiredArgsConstructor
 public class RegisterAccountResponse {
-    final private String accountId;
+    final private Long accountId;
     final private String email;
     final private String nickname;
 
-    public RegisterAccountResponse from(final Account account) {
+    public static RegisterAccountResponse from(final Account account) {
         return new RegisterAccountResponse(
                 account.getId(),
                 account.getEmail(),

@@ -1,5 +1,6 @@
 package com.codingrecipe.account.service.request;
 
+import com.codingrecipe.account.entity.Account;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 

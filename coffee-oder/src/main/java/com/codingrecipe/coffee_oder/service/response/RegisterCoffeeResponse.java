@@ -9,11 +9,11 @@ import lombok.RequiredArgsConstructor;
 public class RegisterCoffeeResponse {
     private final Long CoffeeId;
     private final String CoffeeName;
-    private final String CoffeePrice;
+    private final Long CoffeePrice;
     private final String CoffeeData;
     private final String registerAccountNickname;
 
-    public RegisterCoffeeResponse from(final Coffee coffee) {
+    public static RegisterCoffeeResponse from(final Coffee coffee) {
         return new RegisterCoffeeResponse(
                 coffee.getId(),
                 coffee.getCoffeeName(),
