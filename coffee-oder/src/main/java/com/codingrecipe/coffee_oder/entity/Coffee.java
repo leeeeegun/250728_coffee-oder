@@ -21,6 +21,10 @@ public class Coffee {
     private String coffeePrice;
     private String coffeeData;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "account_id", nullable = false)
+    private Account account;
+
     public Coffee(String coffeeName, String coffeePrice, String coffeeData) {
         this.coffeeName = coffeeName;
         this.coffeePrice = coffeePrice;

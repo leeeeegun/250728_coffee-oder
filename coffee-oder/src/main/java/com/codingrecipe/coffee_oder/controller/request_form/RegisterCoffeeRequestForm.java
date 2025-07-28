@@ -1,5 +1,6 @@
 package com.codingrecipe.coffee_oder.controller.request_form;
 
+import com.codingrecipe.coffee_oder.service.request.RegisterCoffeeRequest;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
@@ -14,7 +15,7 @@ public class RegisterCoffeeRequestForm {
     final private String coffeeData;
 
     // RequestForm을 Request로 변환
-    public RegisterCoffeeRequestForm toRegisterCoffeeRequest(){
-        return new RegisterCoffeeRequestForm(coffeeName, coffeePrice, coffeeData);
+    public RegisterCoffeeRequest toRegisterCoffeeRequest(){
+        return new RegisterCoffeeRequest(coffeeName, coffeePrice, coffeeData);
     }
 }

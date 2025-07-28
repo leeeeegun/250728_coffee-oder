@@ -13,7 +13,7 @@ import java.util.Optional;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class CoffeeServiceImpl {
+public class CoffeeServiceImpl implements CoffeeService {
 
     final private CoffeeRepository coffeeRepository;
     final private AccountRepository accountRepository;
@@ -21,13 +21,16 @@ public class CoffeeServiceImpl {
     @Override
     public RegisterCoffeeResponse register(RegisterCoffeeRequest request, Long accountId) {
         Optional<Account> maybeAccount = accountRepository.findById(accountId);
-        log.info("잘못된 접근입니다");
-        return null;
+
+        if (maybeAccount.isPresent()) {
+            log.info("잘못된 접근입니다");
+            return null;
+        }
+
+        Account account = maybeAccount.get();
+        Coffee requestedCoffee = request.toCoffee(account);
+
+        Coffee savedCoffee = coffeeRepository.save(requestedCoffee);
+        return RegisterCoffeeResponse.from(savedCoffee);
     }
-
-    Account account = maybeAccount.get();
-    Coffee requesteCoffee = request.toCoffee(account);
-
-    Coffee saveCoffee = coffeeRepository.save(requesteCoffee);
-    return RegisterCoffeeResponse.from(savedCoffee);
 }

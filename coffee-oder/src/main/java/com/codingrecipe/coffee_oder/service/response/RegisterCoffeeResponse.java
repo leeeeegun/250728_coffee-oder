@@ -13,12 +13,12 @@ public class RegisterCoffeeResponse {
     private final String CoffeeData;
     private final String registerAccountNickname;
 
-    public RegisterCoffeeResponse from(Coffee coffee) {
+    public RegisterCoffeeResponse from(final Coffee coffee) {
         return new RegisterCoffeeResponse(
                 coffee.getId(),
-                coffee.getName(),
-                coffee.getPrice(),
-                coffee.getData(),
+                coffee.getCoffeeName(),
+                coffee.getCoffeePrice(),
+                coffee.getCoffeeData(),
                 coffee.getAccount().getNickname()
         );
     }
