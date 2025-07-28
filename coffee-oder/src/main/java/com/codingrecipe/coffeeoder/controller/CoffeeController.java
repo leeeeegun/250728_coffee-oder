@@ -2,6 +2,8 @@ package com.codingrecipe.coffeeoder.controller;
 
 
 import com.codingrecipe.coffeeoder.service.CoffeeService;
+import com.codingrecipe.coffeeoder.service.request.RegisterCoffeeRequest;
+import com.codingrecipe.coffeeoder.service.response.RegisterCoffeeResponse;
 import jakarta.servlet.ServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -30,7 +32,7 @@ public class CoffeeController {
         Long accountId = redisCacheService.getValueByKey(userToken, Long.class);
 
         RegisterCoffeeRequest request = requestForm.toRigsterRequest();
-        RegisterCoffeeResponse = coffeeService.register(request, accountId);
+        RegisterCoffeeResponse response = coffeeService.register(request, accountId);
 
         return RegisterCoffeeResponseForm.from(response);
     }
